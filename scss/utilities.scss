@@ -7,6 +7,10 @@
   display: flex;
 }
 
+.fixed {
+  position: fixed;
+}
+
 @mixin font($weight) {
   $light: "Josefin Sans Light";
   $thin: "Josefin Sans Thin";
@@ -24,3 +28,12 @@
   }
 }
 
+@mixin flex($dir) {
+  display: flex;
+
+  @if $dir == col {
+    flex-direction: column;
+  } @else if $dir == row-rev {
+    flex-direction: row-reverse;
+  }
+}

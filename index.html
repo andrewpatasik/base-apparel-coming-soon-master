@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-</head>
-
-<body>
-  <div id="root">
-    <div id="background" class="container"></div>
-  </div>
-  <script src="index.js"></script>
-</body>
-
+  <body>
+    <div id="root">
+      <div id="background" class="fixed container"></div>
+      <header id="hero__header">
+        <img src="images/logo.svg" />
+      </header>
+      <section id="hero__content">
+        <figure id="hero__content__image__wrapper">
+          <picture>
+            <source
+              media="(min-width: 1400px)"
+              srcset="/images/hero-desktop.jpg"
+              alt="hero desktop"
+            />
+            <img
+              id="hero__content__image"
+              src="/images/hero-mobile.jpg"
+              alt="hero mobile"
+              srcset="/images/hero-mobile.jpg"
+            />
+          </picture>
+        </figure>
+        <article id="hero__content__article">
+          <header id="hero__content__header">
+            <h1>we're coming soon</h1>
+          </header>
+          <p>
+            Hello fellow shopper! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and launch deals.
+          </p>
+        </article>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
