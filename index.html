@@ -14,29 +14,29 @@
   </head>
 
   <body>
-    <div id="root">
-      <div id="background" class="fixed container"></div>
-      <header id="hero__header">
-        <img src="images/logo.svg" />
-      </header>
+    <div id="background" class="fixed"></div>
+    <section id="hero">
+      <figure id="hero__image__wrapper">
+        <picture>
+          <source
+            media="(min-width: 1400px)"
+            srcset="/images/hero-desktop.jpg"
+            alt="hero desktop"
+          />
+          <img
+            id="hero__image"
+            src="/images/hero-mobile.jpg"
+            alt="hero mobile"
+            srcset="/images/hero-mobile.jpg"
+          />
+        </picture>
+      </figure>
       <section id="hero__content">
-        <figure id="hero__content__image__wrapper">
-          <picture>
-            <source
-              media="(min-width: 1400px)"
-              srcset="/images/hero-desktop.jpg"
-              alt="hero desktop"
-            />
-            <img
-              id="hero__content__image"
-              src="/images/hero-mobile.jpg"
-              alt="hero mobile"
-              srcset="/images/hero-mobile.jpg"
-            />
-          </picture>
-        </figure>
+        <div id="hero__content__header">
+          <img src="images/logo.svg" />
+        </div>
         <article id="hero__content__article">
-          <header id="hero__content__header">
+          <header id="hero__content__article__header">
             <h1>we're coming soon</h1>
           </header>
           <p>
@@ -46,7 +46,7 @@
           </p>
         </article>
       </section>
-    </div>
+    </section>
     <script src="index.js"></script>
   </body>
 </html>

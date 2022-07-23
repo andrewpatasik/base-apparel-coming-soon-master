@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "breakpoints" as *;
+
+.fixed {
+  position: fixed;
+}
+
+@mixin flex($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+};
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
